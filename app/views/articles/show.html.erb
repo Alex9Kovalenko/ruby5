@@ -2,12 +2,12 @@
 
 <p>
   <strong>Area:</strong>
-  <%= @article.area_id %>
+  <%= Area.find(@article.area_id).area %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @article.author_id %>
+  <%= Author.find(@article.author_id).name %>
 </p>
 
 <p>

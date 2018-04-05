@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Area</th>
-      <th>Author</th>
+	  <th>Area</th>
+	  <th>Author</th>
       <th>Title</th>
       <th>Text</th>
       <th colspan="3"></th>
@@ -16,8 +16,10 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.area_id %></td>
-        <td><%= article.author_id %></td>
+		<td><%= Area.find(article.area_id).area %></td>
+		
+		<td><%= Author.find(article.author_id).name %></td>
+		
         <td><%= article.title %></td>
         <td><%= article.text %></td>
         <td><%= link_to 'Show', article %></td>
